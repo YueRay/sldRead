@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<!--<html lang="zh-Hant">-->
+	<head>
+    <meta charset="utf-8"/>
+    <title>章节名-水帘洞小说</title>
+    <!--这里记得要改一下，动态生成-->
+    <!--<title>章節名-水簾洞小說</title>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+    <!-- Le styles -->
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+  	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+    <!--[if lte IE 8 ]>
+    	<html class="lte_ie8">
+      <link rel="stylesheet" type="text/css" href="css/ie8.css"/>
+    <![endif]-->
+        <meta name="keywords" content="动漫,同人,玄幻" />
+    <meta name="description" content="同人文学。"/>
+  </head>
+  <body>
+  	<span id="top"></span><!--回到首页的标记标签-->
+		<!--页面加载层，数据加载时显示，默认隐藏-->
+    <div class="reader-load" id="loading">
+      <div class="spinner">
+        <div class="rect1" style="background: #8d6e63;"></div>
+        <div class="rect2"  style="background: #8d6e63;"></div>
+        <div class="rect3"  style="background: #8d6e63;"></div>
+        <div class="rect4"  style="background: #8d6e63;"></div>
+        <div class="rect5"  style="background: #8d6e63;"></div>
+      </div>
+      <i></i>
+      <p class="typing" style="color: #8d6e63;">加载中,&nbsp;&nbsp;&nbsp;请稍候……</p>
+      <!--<p class="typing" style="color: #8d6e63;">加載中,&nbsp;&nbsp;&nbsp;請稍候……</p>-->
+    </div><!--loadingEND-->
+    <!--导航开始-->
+    <div class="navbar navbar-fixed-top" id="nav">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar">
+            </span>
+            <span class="icon-bar">
+            </span>
+            <span class="icon-bar">
+            </span>
+          </button>
+          <a class="brand" href="index_j.html">
+          </a>
+          <a class="hidden-desktop sitename" href="index_j.html">
+            水帘洞小说
+            <!--水簾洞小說-->
+          </a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li>
+                <a class="visible-desktop" href="index_j.html" title="www.sldbook.com">
+                  首页
+                  <!--首頁-->
+                </a>
+              </li>
+              <li>
+                  <a onclick="tolist('category',encodeURI('都市'),1,'all')" href="javascript:void(0)">
+                  <i class="cateicon ds-small hidden-desktop">
+                  </i>
+                  都市
+                </a>
+              </li>
+              <li>
+                  <a onclick="tolist('category',encodeURI('武侠'),1,'all')" href="javascript:void(0)">
+                  <i class="cateicon wx-small hidden-desktop">
+                  </i>
+                  武侠
+                  <!--武俠-->
+                </a>
+              </li>
+              <li>
+                  <a onclick="tolist('category',encodeURI('奇幻'),1,'all')" href="javascript:void(0)">
+                  <i class="cateicon qh-small hidden-desktop">
+                  </i>
+                  奇幻
+                </a>
+              </li>
+              <li>
+                  <a onclick="tolist('category',encodeURI('校园'),1,'all')" href="javascript:void(0)">
+                  <i class="cateicon xy-small hidden-desktop">
+                  </i>
+                  校园
+                  <!--校園-->
+                </a>
+              </li>
+              <li class="dropdown visible-desktop">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  更多
+                  <b class="caret">
+                  </b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                      <a onclick="tolist('category',encodeURI('古代言情'),1,'all')" href="javascript:void(0)">
+                      <i class="cateicon gy-small">
+                      </i>
+                      古言
+                    </a>
+                  </li>
+                  <li>
+                      <a onclick="tolist('category',encodeURI('仙侠'),1,'all')" href="javascript:void(0)">
+                      <i class="cateicon xx-small">
+                      </i>
+                      仙侠
+                      <!--仙俠-->
+                    </a>
+                  </li>
+                  <li>
+                      <a onclick="tolist('category',encodeURI('耽美'),1,'all')" href="javascript:void(0)">
+                      <i class="cateicon dm-small">
+                      </i>
+                      耽美
+                    </a>
+                  </li>
+                  <li>
+                      <a onclick="tolist('category',encodeURI('同人'),1,'all')" href="javascript:void(0)">
+                      <i class="cateicon tr-small">
+                      </i>
+                      同人
+                    </a>
+                  </li>
+                  <li>
+                      <a onclick="tolist('category',encodeURI('穿越'),1,'all')" href="javascript:void(0)">
+                      <i class="cateicon cy-small">
+                      </i>
+                      穿越
+                    </a>
+                  </li>
+                  <li>
+                      <a onclick="tolist('category',encodeURI('历史'),1,'all')" href="javascript:void(0)">
+                      <i class="cateicon ls-small">
+                      </i>
+                      历史
+                      <!--歷史-->
+                    </a>
+                  </li>
+                  <li>
+                      <a onclick="tolist('category',encodeURI('总裁'),1,'all')" href="javascript:void(0)">
+                      <i class="cateicon zc-small">
+                      </i>
+                      总裁
+                      <!--總裁-->
+                    </a>
+                  </li>
+                  <li>
+                      <a onclick="tolist('category',encodeURI('科幻'),1,'all')" href="javascript:void(0)">
+                      <i class="cateicon kh-small">
+                      </i>
+                      科幻
+                    </a>
+                  </li>
+                  <li>
+                      <a onclick="tolist('category',encodeURI('游戏'),1,'all')" href="javascript:void(0)">
+                      <i class="cateicon yx-small">
+                      </i>
+                      游戏
+                      <!--遊戲-->
+                    </a>
+                  </li>
+                  <li>
+                      <a onclick="tolist('category',encodeURI('修真'),1,'all')" href="javascript:void(0)">
+                      <i class="cateicon xz-small">
+                      </i>
+                      修真
+                    </a>
+                  </li>
+                  <li>
+                      <a onclick="tolist('category',encodeURI('异能'),1,'all')" href="javascript:void(0)">
+                      <i class="cateicon yn-small">
+                      </i>
+                      异能
+                      <!--異能-->
+                    </a>
+                  </li>
+                  <li>
+                      <a onclick="tolist('category',encodeURI('经典'),1,'all')" href="javascript:void(0)">
+                      <i class="cateicon jd-small">
+                      </i>
+                      经典
+                      <!--經典-->
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <form class="navbar-form form-search" id="search" onkeydown="if(event.keyCode==13)return false">
+                  <i class="icon-search" onclick="searchs()">
+                  </i>
+                  <!--搜索按钮，繁体替换placeholder="請使用繁體搜索"-->
+                  <input class="span2 input-medium search-query" id="query" type="search" placeholder="请用简体搜索">
+                  <!--<input class="span2 input-medium search-query" type="search" placeholder="请用繁體搜索">-->
+                </form>
+              </li>
+            </ul>
+            <!--简繁切换按钮繁體替換-->
+            <button class="pull-right btn btn-inverse" onclick="tofanti()" id="jf">
+                <span style="color:#666;">
+                繁
+              </span>
+                &nbsp;/&nbsp;简
+            </button>
+            <!--<button class="pull-right btn btn-inverse" id="jf">-->
+              <!--繁&nbsp;/&nbsp;<span style="color:#666;">简</span>-->
+            <!--</button>-->
+            <!--登录按钮 本期隐藏-->
+            <button class="btn btn-inverse btn-login" style="display:none;">
+              登录
+            </button>
+            <button class="btn btn-inverse btn-login" id="history" style="display:none;">
+              书签
+            </button>
+          </div>
+          <!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <!--导航结束-->
+    <!--404错误层-->
+    <div class="container" id="error404">
+        <div class="pic-error404">
+            <a class="btn" href="javascript:history.go(-1)">返回上页</a>
+            <a class="btn btn-info" href="index_j.html">回到首页</a>
+        </div>
+    </div>
+    <div class="container clearfix main" id="main">
+    	<div class="row-fluid" role="main" >
+      	<div class="span12 txtbox">
+        	<div class="chap-title">
+          	<!--加入书签按钮 本期不显示-->
+          	<button class="read-bookmark btn-link" style="display:none;"></button>
+            <!--章节标题-->
+            <h1 id="chapname"></h1>
+            <!--书籍tag 直接写入链接 注意简繁体-->
+            <div id="readtag">
+            	<!--<a class="tag304 jimg" title="tag" href="list.php?tid=301#tag"></a>-->
+              <!--<a class="tag308 jimg" title="tag" href="list.php?tid=301#tag"></a>-->
+              <!--<a class="tag302 jimg" title="tag" href="list.php?tid=301#tag"></a>-->
+            </div>
+          </div><!--chaptitleEND-->
+          <!--书籍内容，p标签分段写入-->
+        	<div class="txt" id="chaptxt">
+
+          </div>
+          <p class="read-website">sldbook.com&nbsp;&nbsp;&nbsp;&nbsp;水帘洞小说&nbsp;&nbsp;&nbsp;&nbsp;sldbook.com</p>
+          <!--<p class="read-website">sldbook.com&nbsp;&nbsp;&nbsp;&nbsp;水簾洞小說&nbsp;&nbsp;&nbsp;&nbsp;sldbook.com</p>-->
+        </div>
+        <div class="nextpagebox">
+        	<!--上下章按钮 第一章时在上一章按钮的class中加入disabled，非第一章则删除该类即可。同理最后一章时在class中加入disabled，按钮即不可点击-->
+        	<button class="btn disabled" id="pre-chap">上一章</button>
+          <button class="btn" id="chaplist">目录<!--目錄--></button>
+          <button class="btn" id="next-chap">下一章</button>
+        </div>
+      </div>
+    </div><!--#mainEND-->
+    <!--footer start-->
+    <div id="footer-nav">
+    	<div class="container">
+      	<div class="row-fluid">
+        	<div class="span6">
+          	<div class="widget">
+            	<div class="sidecontent boy">
+              	<h2>男生</h2>
+                <div class="cate-cloud">
+                    <a onclick="tolist('category',encodeURI('都市'),1,0)" href="javascript:void(0)">都市</a>
+                    <a onclick="tolist('category',encodeURI('武侠'),1,0)" href="javascript:void(0)">武侠</a>
+                    <a onclick="tolist('category',encodeURI('奇幻'),1,0)" href="javascript:void(0)">奇幻</a>
+                    <a onclick="tolist('category',encodeURI('仙侠'),1,0)" href="javascript:void(0)">仙侠</a>
+                    <a onclick="tolist('category',encodeURI('修真'),1,0)" href="javascript:void(0)">修真</a>
+                    <a onclick="tolist('category',encodeURI('异能'),1,0)" href="javascript:void(0)">异能</a>
+                    <a onclick="tolist('category',encodeURI('科幻'),1,0)" href="javascript:void(0)">科幻</a>
+                    <a onclick="tolist('category',encodeURI('历史'),1,0)" href="javascript:void(0)">历史</a>
+                    <a onclick="tolist('category',encodeURI('穿越'),1,0)" href="javascript:void(0)">穿越</a>
+                    <a onclick="tolist('category',encodeURI('同人'),1,0)" href="javascript:void(0)">同人</a>
+                    <a onclick="tolist('category',encodeURI('游戏'),1,0)" href="javascript:void(0)">游戏</a>
+                    <a onclick="tolist('category',encodeURI('校园'),1,0)" href="javascript:void(0)">校园</a>
+                    <a onclick="tolist('category',encodeURI('经典'),1,0)" href="javascript:void(0)">经典</a>
+                	<!--<a href="list.php?cid=01&sex=boy#cate">都市</a>
+                  <a href="list.php?cid=02&sex=boy#cate">武俠</a>
+                  <a href="list.php?cid=03&sex=boy#cate">奇幻</a>
+                  <a href="list.php?cid=04&sex=boy#cate">仙俠</a>
+                  <a href="list.php?cid=05&sex=boy#cate">修真</a>
+                  <a href="list.php?cid=07&sex=boy#cate">異能</a>
+                  <a href="list.php?cid=08&sex=boy#cate">科幻</a>
+                  <a href="list.php?cid=09&sex=boy#cate">歷史</a>
+                  <a href="list.php?cid=11&sex=boy#cate">穿越</a>
+                  <a href="list.php?cid=12&sex=boy#cate">同人</a>
+                  <a href="list.php?cid=13&sex=boy#cate">遊戲</a>
+                  <a href="list.php?cid=14&sex=boy#cate">校園</a>
+                  <a href="list.php?cid=15&sex=boy#cate">經典</a>-->					
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="span6">
+          	<div class="widget">
+            	<div class="sidecontent girl">
+              	<h2>女生</h2>
+                <div class="cate-cloud">
+                    <a onclick="tolist('category',encodeURI('都市'),1,1)" href="javascript:void(0)">都市</a>
+                    <a onclick="tolist('category',encodeURI('武侠'),1,1)" href="javascript:void(0)">武侠</a>
+                    <a onclick="tolist('category',encodeURI('奇幻'),1,1)" href="javascript:void(0)">奇幻</a>
+                    <a onclick="tolist('category',encodeURI('仙侠'),1,1)" href="javascript:void(0)">仙侠</a>
+                    <a onclick="tolist('category',encodeURI('耽美'),1,1)" href="javascript:void(0)">耽美</a>
+                    <a onclick="tolist('category',encodeURI('异能'),1,1)" href="javascript:void(0)">异能</a>
+                    <a onclick="tolist('category',encodeURI('科幻'),1,1)" href="javascript:void(0)">科幻</a>
+                    <a onclick="tolist('category',encodeURI('总裁'),1,1)" href="javascript:void(0)">总裁</a>
+                    <a onclick="tolist('category',encodeURI('穿越'),1,1)" href="javascript:void(0)">穿越</a>
+                    <a onclick="tolist('category',encodeURI('同人'),1,1)" href="javascript:void(0)">同人</a>
+                    <a onclick="tolist('category',encodeURI('游戏'),1,1)" href="javascript:void(0)">游戏</a>
+                    <a onclick="tolist('category',encodeURI('校园'),1,1)" href="javascript:void(0)">校园</a>
+                    <a onclick="tolist('category',encodeURI('古代言情'),1,1)" href="javascript:void(0)">古代言情</a>
+                	<!--<a href="list.php?cid=01&sex=boy#cate">都市</a>
+                  <a href="list.php?cid=02&sex=boy#cate">武俠</a>
+                  <a href="list.php?cid=03&sex=boy#cate">奇幻</a>
+                  <a href="list.php?cid=04&sex=boy#cate">仙俠</a>
+                  <a href="list.php?cid=06&sex=boy#cate">耽美</a>
+                  <a href="list.php?cid=07&sex=boy#cate">異能</a>
+                  <a href="list.php?cid=08&sex=boy#cate">科幻</a>
+                  <a href="list.php?cid=10&sex=boy#cate">總裁</a>
+                  <a href="list.php?cid=11&sex=boy#cate">穿越</a>
+                  <a href="list.php?cid=12&sex=boy#cate">同人</a>
+                  <a href="list.php?cid=13&sex=boy#cate">遊戲</a>
+                  <a href="list.php?cid=14&sex=boy#cate">校園</a>
+                  <a href="list.php?cid=16&sex=boy#cate">古代言情</a>-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+    	<div class="container">
+      		<p class="copyright">Email: dasheng@sldbook.com</p>
+          <p class="copyright">警告：本网只供18岁以上人士浏览！如你未满18岁或未符合当地法律许可之法定年龄，请即离开本站！</p>
+          <!--<p class="copyright">警告：本網只供18歲以上人士瀏覽！如你未滿18歲或未符合當地法律許可之法定年齡，請即離開本站！</p>-->
+        	<p class="copyright">Copyright © 2016 水簾洞小說. All Rights Reserved.</p>
+        </div>
+    </div>
+    <p id="back-to-top"><a href="#top"></a></p>
+    <!--footerend-->
+    <!-- Le javascript  -->
+		<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+    <!--返回到顶部的JS 可以和其他JS合并,注意阅读页不需要返回顶部-->
+    <script type="text/javascript" src="js/backtotop.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/base64.js"></script>
+    <script type="text/javascript">
+        var GET = $.urlGet();
+        var bookid = GET['bookid'];
+        bookid = bookid.split('#')[0];
+        var pageNum = GET['seccount'];
+        var page = location.hash;
+        page = page.replace('#','');
+        var jof = 0;
+        var thisurl = location.href;
+        var paramater = thisurl.split('?');
+        var cookie_jof =  getCookie('jof');
+        if(cookie_jof == null||cookie_jof == 'undefind'){
+            setCookie('jof',0);
+            cookie_jof = 0;
+        }
+        if(cookie_jof != 0){
+            tofanti();
+        }
+        function tofanti(){
+            setCookie('jof',1);
+            location.href = 'reader_f.html?'+paramater[1];
+        }
+    </script>
+  <script type="text/javascript" src="js/read.js"></script>
+  <script type="text/javascript">
+      function tolist(type,query,page,sex){
+          var url = "list.php?type="+type+"&query="+query+"&sex="+sex+"#"+page;
+          location.href = url;
+      }
+      $(document).ready(function () {
+          $('#search').keydown(function (event) {
+              var curKey = event.which;
+              if (curKey == 13) {
+                  var query = $('#query').val();
+                  if (query.length == 0) {
+                      alert("请输入搜索内容");
+                  } else {
+                      location.href = 'list.php?type=query&query='+query+'&sex=0#1';
+                  }
+              }
+          });
+      });
+      function searchs(){
+          var query = $('#query').val();
+          if (query.length == 0) {
+              alert("请输入搜索内容");
+          } else {
+              location.href = 'list.php?type=query&query=' + query + '&sex=0#1';
+          }
+      }
+  </script>
+  </body>
+</html>

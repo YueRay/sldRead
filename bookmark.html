@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<!--<html lang="zh-Hant">-->
+	<head>
+    <meta charset="utf-8"/>
+    <title>水帘洞小说</title>
+    <!--<title>水簾洞小說</title>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+    <!-- Le styles -->
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+  	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+    <!--[if lte IE 8 ]>
+    	<html class="lte_ie8">
+      <link rel="stylesheet" type="text/css" href="css/ie8.css"/>
+    <![endif]-->
+    <meta name="keywords" content="动漫,同人,玄幻" />
+    <meta name="description" content="同人文学。"/>
+  </head>
+  <body>
+    <!--404错误层-->
+    <div class="container" id="error404">
+    	<div class="pic-error404">
+        <a class="btn" href="javascript:history.go(-1)">返回上页</a>
+        <a class="btn btn-info" href="index.php">回到首页</a>
+      </div>
+    </div>
+  	<span id="top"></span>
+		<!--页面加载层，数据加载时显示-->
+    <div id="loading">
+      <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+      <i></i>
+      <p class="typing">加载中,&nbsp;&nbsp;&nbsp;请稍候……</p>
+      <!--<p class="typing">加載中,&nbsp;&nbsp;&nbsp;請稍候……</p>-->
+    </div><!--loadingEND-->
+    <!--导航开始-->
+    <div class="navbar navbar-fixed-top" id="nav">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar">
+            </span>
+            <span class="icon-bar">
+            </span>
+            <span class="icon-bar">
+            </span>
+          </button>
+          <a class="brand" href="index.php">
+          </a>
+          <a class="hidden-desktop sitename" href="index.php">
+            水帘洞小说
+            <!--水簾洞小說-->
+          </a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li>
+                <a class="visible-desktop" href="index.php" title="www.sldbook.com">
+                  首页
+                  <!--首頁-->
+                </a>
+              </li>
+              <li>
+                <a href="list.php?cid=01&sex=all#cate">
+                  <i class="cateicon ds-small hidden-desktop">
+                  </i>
+                  都市
+                </a>
+              </li>
+              <li>
+                <a href="list.php?cid=02&sex=all#cate">
+                  <i class="cateicon wx-small hidden-desktop">
+                  </i>
+                  武侠
+                  <!--武俠-->
+                </a>
+              </li>
+              <li>
+                <a href="list.php?cid=03&sex=all#cate">
+                  <i class="cateicon qh-small hidden-desktop">
+                  </i>
+                  奇幻
+                </a>
+              </li>
+              <li>
+                <a href="list.php?cid=14&amp;sex=all#cate">
+                  <i class="cateicon xy-small hidden-desktop">
+                  </i>
+                  校园
+                  <!--校園-->
+                </a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  更多
+                  <b class="caret">
+                  </b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="list.php?cid=16&sex=girl#cate">
+                      <i class="cateicon gy-small">
+                      </i>
+                      古言
+                    </a>
+                  </li>
+                  <li>
+                    <a href="list.php?cid=04&sex=all#cate">
+                      <i class="cateicon xx-small">
+                      </i>
+                      仙侠
+                      <!--仙俠-->
+                    </a>
+                  </li>
+                  <li>
+                    <a href="list.php?cid=06&sex=girl#cate">
+                      <i class="cateicon dm-small">
+                      </i>
+                      耽美
+                    </a>
+                  </li>
+                  <li>
+                    <a href="list.php?cid=12&sex=all#cate">
+                      <i class="cateicon tr-small">
+                      </i>
+                      同人
+                    </a>
+                  </li>
+                  <li>
+                    <a href="list.php?cid=11&sex=all#cate">
+                      <i class="cateicon cy-small">
+                      </i>
+                      穿越
+                    </a>
+                  </li>
+                  <li>
+                    <a href="list.php?cid=09&sex=boy#cate">
+                      <i class="cateicon ls-small">
+                      </i>
+                      历史
+                      <!--歷史-->
+                    </a>
+                  </li>
+                  <li>
+                    <a href="list.php?cid=10&sex=girl#cate">
+                      <i class="cateicon zc-small">
+                      </i>
+                      总裁
+                      <!--總裁-->
+                    </a>
+                  </li>
+                  <li>
+                    <a href="list.php?cid=08&sex=all#cate">
+                      <i class="cateicon kh-small">
+                      </i>
+                      科幻
+                    </a>
+                  </li>
+                  <li>
+                    <a href="list.php?cid=13&sex=all#cate">
+                      <i class="cateicon yx-small">
+                      </i>
+                      游戏
+                      <!--遊戲-->
+                    </a>
+                  </li>
+                  <li>
+                    <a href="list.php?cid=05&sex=boy#cate">
+                      <i class="cateicon xz-small">
+                      </i>
+                      修真
+                    </a>
+                  </li>
+                  <li>
+                    <a href="list.php?cid=07&sex=all#cate">
+                      <i class="cateicon yn-small">
+                      </i>
+                      异能
+                      <!--異能-->
+                    </a>
+                  </li>
+                  <li>
+                    <a href="list.php?cid=15&sex=boy#cate">
+                      <i class="cateicon jd-small">
+                      </i>
+                      经典
+                      <!--經典-->
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <form class="navbar-form form-search">
+                  <i class="icon-search">
+                  </i>
+                  <!--搜索按钮，繁体替换placeholder="請使用繁體搜索"-->
+                  <input class="span2 input-medium search-query" type="search" placeholder="请用简体搜索">
+                  <!--<input class="span2 input-medium search-query" type="search" placeholder="请用繁體搜索">-->
+                </form>
+              </li>
+            </ul>
+            <!--简繁切换按钮繁體替換-->
+            <button class="pull-right btn btn-inverse" id="jf">
+              <span style="color:#666;">
+                繁
+              </span>
+              &nbsp;/&nbsp;简
+            </button>
+            <!--<button class="pull-right btn btn-inverse" id="jf">
+              繁&nbsp;/&nbsp;<span style="color:#666;">简</span>
+            </button>-->
+          </div>
+          <!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <!--导航结束-->    
+    <!--注册登录层-->
+    <!--注册登陆为用户填写的表单，用户名、密码在用户写入鼠标焦点离开时进行验证。
+    可尝试将表单项目写入localstorage存储。利用session或者cookie都可以，注册登录的权限限制可以看提示文案~
+    登录成功后隐藏该层，显示书架设置层-->
+    <div id="login" style="display: block;">
+      <div class="container main">
+        <!--桌面设备上的标题-->
+        <h1 class="visible-desktop">水簾洞小說</h1>
+        <!--切换tab bootstrapJS控制，激活状态下，li具有类class="active",具体调用方式api http://v2.bootcss.com/javascript.html#tabs -->
+        <ul class="nav nav-tabs" id="myTab">
+          <li class="active"><a href="#signup" data-toggle="tab">注册</a></li>
+          <li><a href="#signin" data-toggle="tab">登录</a></li>
+        </ul>
+        <!--主体表单-->
+        <div class="tab-content">
+          <!--默认显示区，bootstrapJS控制，表单切换-->
+          <div class="tab-pane active" id="signup">
+            <form class="form-signup">
+              <p class="hintforie">email地址：</p><!--ie8显示的提示-->
+              <!--Jquery应该有email验证的机制-->
+              <input type="email" class="input-block-level" placeholder="请输入email地址">
+              <p class="hintforie">设置密码（不少于6位）：</p>
+              <input type="password" class="input-block-level" placeholder="密码（不少于6位）">
+              <p class="hintforie">再次输入密码:</p>
+              <input type="password" class="input-block-level" placeholder="再次输入密码">
+              <!--<div class="g-recaptcha" data-sitekey="6Le1UBkTAAAAAO2WMgUX_ZowGA12NMLXQRMxb0Aa"></div>-->
+              <!--验证码要你来加入，具体样例看云笔记里google验证码服务，里面有样例代码，为JS+php，上面这个DIV里有需要的sitekey，测试地址test.sldbook.com-->
+              <!--错误提示，默认不显示，用li标签顺序写入错误的原因即可，下面是一个例子，展示效果的，可以添加列表项，中间可以加入链接-->
+              <!--请注意这里插入文字的简繁体-->
+              <div class="alert alert-error" id="summary-signup" style="display: block;">
+              	<ul>
+                	<li>该email已经注册过，<a>直接登录</a>?</li>
+                </ul>
+              </div>
+              <!--提示文字类型
+              Email地址应当包含@,形如XX@XX.XX
+              Email地址中只能含有数字，字母，下划线和连接符，不支持含有？#等特殊符号
+              Email地址不支持中文输入
+              请输入至少六位密码
+              密码位数不得超过16位（这里你看着办随便限制一下就行）
+              两次输入的密码不一致，请重新输入
+              该Email地址已经注册过，直接登录？
+              小站资源有限，1位用户24小时内只能注册1个账号。
+              对不起，您所在的ip段暂时不支持注册，作为游客浏览也很有趣哦。
+              验证码错误
+              -->
+              <!--提示文字类型繁体
+              Email地址應當包含@,形如XX@XX.XX
+              Email地址中只能含有數字，字母，下劃綫和連接符，不支持含有？#等特殊符號
+              Email地址不支持中文輸入
+              請輸入至少6位密碼
+              密碼位數不得超過16位（这里你看着办随便限制一下就行）
+              兩次輸入的密碼不一致，請重新輸入
+              該Email地址已經註冊過，直接登錄？
+              小站資源有限，1位用戶24小時內只能註冊1個帳號，。
+              對不起，您所在的ip段暫時不支持註冊，作為遊客瀏覽也很有趣哦
+              驗證碼錯誤-->
+              <!--注册按钮，表单提交验证无误后直接到登录页面-->
+              <button class="btn btn-large" type="submit" id="submit-signin">注册水帘洞</button>
+              <!--<p class="hintforie">email地址：</p>
+              <input type="email" class="input-block-level" placeholder="請輸入Email地址">
+              <p class="hintforie">設置密碼（不少於6位）：</p>
+              <input type="password" class="input-block-level" placeholder="密碼（不少於6位）">
+              <p class="hintforie">再次輸入密碼：</p>
+              <input type="password" class="input-block-level" placeholder="再次輸入密碼">
+              <div class="g-recaptcha" data-sitekey="6Le1UBkTAAAAAO2WMgUX_ZowGA12NMLXQRMxb0Aa"></div>
+              <div class="alert alert-error" id="summary-signup"></div>
+              <button class="btn btn-large btn-primary" type="submit" id="submit-signin">確認註冊</button>-->
+            </form>
+          </div>
+          <!--登陆-->
+          <div class="tab-pane" id="signin">
+            <!--登陆表单start-->
+            <form class="form-signin">
+              <p class="hintforie">email地址：</p>
+              <input type="text" class="input-block-level" placeholder="Email地址">
+              <p class="hintforie">密码：<!--密碼：--></p>
+              <input type="password" class="input-block-level" placeholder="密码">
+              <!--<input type="password" class="input-block-level" placeholder="密碼">-->
+              <div>
+              	<!--记住我，点击之后保持登陆1年，使用cookies-->
+                <label class="checkbox">
+                  <input type="checkbox" value="remember-me"> 记住我<!-- 記住我-->
+                </label>
+                <!--忘记密码按钮，点击链接到忘记密码对话框，调用bootstrap框架中的modal模型，http://v2.bootcss.com/javascript.html#modals -->
+                <a class="unable-login" href="#forgetcode" data-toggle="modal">
+                  忘记密码?
+                  <!--忘記密碼？-->
+                </a>
+              </div>
+              <!--错误提示-->
+              <div class="alert alert-error" id="summary-signin">
+              	<ul>
+                </ul>
+              </div>
+              <!--登录项错误提示文案
+              对不起，您的密码输入错误，您还有N次重试机会
+              对不起，您的密码输入错误，您只剩1次重试机会，忘记密码？
+              对不起，您输入的email格式错误，请重新输入
+              该email未被注册，现在注册？
+              对不起，该账号已经被管理员禁用。
+              对不起，因您超过2年时间未登陆，账号已经被锁定，您可以重新注册。
+              -->
+              <!--登录项错误提示文案繁體
+              對不起，您的密碼輸入錯誤，您還有N次重試機會。
+              對不起，您的密碼輸入錯誤，您只剩1次重試機會，忘記密碼？
+              對不起，您輸入的email格式錯誤，請重新輸入
+              該email尚未被註冊，現在註冊？
+              對不起，該帳號已經被管理員禁用。
+              對不起，因您超過2年時間未登陸，帳號已經被鎖定，您可以重新註冊。
+              -->
+              <!--登录按钮，验证无误后登录，登录后到书架页面-->
+              <button class="btn btn-large" type="submit">登录<!--登錄--></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- 忘记密码提示框-->
+      <!--忘记密码采用bootstrapJS，地址上方有，自动调起-->
+      <div id="forgetcode" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+        <!--提交注册email层-->
+        <div id="submit-email">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">密码找回<!--密碼找回--></h3>
+          </div>
+          <div class="modal-body">
+            <p>临时密码将会发送到您的注册邮箱。该密码24小时之后将会过期，请在登录后即时修改密码<!--臨時密碼將會發送到您的註冊郵箱，該密碼24小時后將會過期，請在登錄后即時修改密碼--></p>
+            <p class="hintforie">请输入您注册的Email地址：<!--請輸入那您註冊時的Email地址：--></p>
+            <!--忘记密码时填写email的输入框。用户输入email之后验证email是否正确，如果不正确，在下方的警示框之中提示。正确则隐藏提交submit-email层，出现alreadysend层-->
+            <input type="text" class="input-block-level" placeholder="您注册的Email地址">
+            <!--<input type="text" class="input-block-level" placeholder="您註冊的Email地址">-->
+            <!--这里需要加一个验证码-->
+            <!--<div class="g-recaptcha" data-sitekey="6Le1UBkTAAAAAO2WMgUX_ZowGA12NMLXQRMxb0Aa"></div>-->
+            <!--提示层，-->
+            <div class="alert alert-error" id="summary-forgetcode">
+              <ul>
+                <li>该email没有注册过，请重新输入，或是<!--該email沒有註冊過，請重新輸入，或是--><a href="#signup" data-dismiss="modal" aria-hidden="true">现在注册<!--現在註冊--></a></li>
+                <!--这个a标签写得有问题，不能把tab切到注册上，求修正-->
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+            <!--确认提交按钮，验证email，email正正确则-->
+            <button class="btn btn-primary">确认发送</button>
+          </div>
+        </div>
+        <!--提示临时密码已经发送，默认隐藏，发送邮件后显示本层，隐藏上方提交email层-->
+        <div id="alreadsend" style="display: block;">
+        	<div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3>邮件已发送<!--郵件已發送--></h3>
+          </div>
+          <div class="modal-body">
+            <p>临时密码将在1分钟内发送到您的邮箱，请您检查邮箱中的邮件。如果没有收到邮件，请检查垃圾箱。邮件可能被拦截。
+            <!--臨時密碼將在1分鐘內發送到您的郵箱，請您檢查郵箱中的郵件。如果沒有收到，請檢查垃圾箱。郵件可能被攔截--></p>
+          </div>
+          <div class="modal-footer">
+          	<!--再次发送邮件-->
+            <button class="btn">没收到，再发一封<!--沒收到，再發一封--></button>
+            <!--关闭对话框，现在就能关掉，不用特殊处理-->
+            <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">已收到邮件<!--已收到郵件--></button>
+          </div>
+        </div><!--alreadysend END-->
+      </div><!--忘记密码层 END-->
+    </div><!--LOGIN END-->
+    <!--书架层 START-->
+    <div class="container main" id="bookmark">
+    	<div class="alert">
+      hi,欢迎回到水帘洞小说
+      <!--hi, 歡迎回到水簾洞小說-->
+      <!--修改密码的链接打开一个对话框，在对话框中修改-->
+      <a href="#resetcode" role="button" class="setup" data-toggle="modal">修改密码<!--修改密碼--></a>
+      </div>
+      <div id="bkmarklist">
+        <div><!--第一本书，禁书示例-->
+        	<div class="timeline"><!--时间线--></div>
+          <!--时间，显示年月日，时间24小时，最好是本地时间-->
+          <p class="readetime">12-11-22 21:33</p>
+          <!--书签卡-->
+          <div class="bkcard">
+            <span class="bkmarkpic"></span>
+            <!--链接到书籍对应章节，整体应该点击任何地方都可以跳转-->
+            <a href="#">
+            <!--书籍标题
+            禁书直接插入span，类名和列表一样，fbb40001表示书籍ID，jimg表示简体，fbbook表示禁书-->
+            <h1><span class="fbb40001 jimg fbbook"></span></h1>
+            <!--阅读记录-->
+            <p class="bkmark-chapter">上次读到：<span class="chpame">分节阅读_11</span></p>
+            </a>
+          </div>
+          <!--下时间线-->
+          <div class="timeline"></div>
+        </div><!--第一本书完-->
+        <div>
+        	<div class="timeline"></div>
+          <p class="readetime">12-11-22 21:33</p>
+          <div class="bkcard">
+            <span class="bkmarkpic"></span>
+            <a href="#">
+            <!--非禁书示例，直接写入书名即可-->
+            <h1>管家与侠女</h1>
+            <p class="bkmark-chapter">上次读到：<span class="chpame">管家与侠女_2</span></p>
+            </a>
+          </div>
+          <div class="timeline"></div>
+        </div>
+      </div>
+    </div><!--bookmark END-->
+    <!--修改密码层-->
+    <div id="resetcode" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    	<!--设置新密码-->
+      <div id="setnewcode">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="resetcode-Label">修改密码<!--修改密碼--></h3>
+        </div>
+        <div class="modal-body">
+        <!--表单组，提交后验证，成功后提示框本层隐藏，出现成功提示层。-->
+          <p class="hintforie">原密码：<!--原密碼：--></p>
+          <input type="password" class="input-block-level" placeholder="原密码">
+          <!--<input type="password" class="input-block-level" placeholder="原密碼">-->
+          <p class="hintforie">新密码：<!--新密碼：--></p>
+          <input type="password" class="input-block-level" placeholder="新密码">
+          <!--<input type="password" class="input-block-level" placeholder="新密碼">-->
+          <p class="hintforie">再次输入新密码：<!--再次輸入新密碼：--></p>
+          <input type="password" class="input-block-level" placeholder="再次输入新密码">
+          <!--<input type="password" class="input-block-level" placeholder="再次輸入新密碼">-->
+        </div>
+        <div class="alert alert-error" id="summary-reset">
+          <ul>
+            <li>原密码输入错误（例子）</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+          <button class="btn btn-primary">确认修改</button>
+        </div>
+      </div><!--设置新密码END-->
+      <!--修改成功提示层，默认隐藏，修改成功后出现-->
+      <div id="newcodedone" style="display: block;">
+      	<div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3>修改密码成功！<!--修改密碼成功！--></h3>
+        </div>
+        <div class="modal-body">
+        	<p>您的密码已经修改，请使用新密码登录。<!--您的密碼已經修改，請使用新密碼登錄--></p>
+        </div>
+        <div class="modal-footer">
+        	<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">完成</button>
+        </div>
+      </div>
+    </div><!--修改密码END-->
+    <!--footer start-->
+    <div id="footer-nav">
+    	<div class="container">
+      	<div class="row-fluid">
+        	<div class="span6">
+          	<div class="widget">
+            	<div class="sidecontent boy">
+              	<h2>男生</h2>
+                <div class="cate-cloud">
+                	<a href="list.php?cid=01&sex=boy#cate">都市</a>
+                  <a href="list.php?cid=02&sex=boy#cate">武侠</a>
+                  <a href="list.php?cid=03&sex=boy#cate">奇幻</a>
+                  <a href="list.php?cid=04&sex=boy#cate">仙侠</a>
+                  <a href="list.php?cid=05&sex=boy#cate">修真</a>
+                  <a href="list.php?cid=07&sex=boy#cate">异能</a>
+                  <a href="list.php?cid=08&sex=boy#cate">科幻</a>
+                  <a href="list.php?cid=09&sex=boy#cate">历史</a>
+                  <a href="list.php?cid=11&sex=boy#cate">穿越</a>
+                  <a href="list.php?cid=12&sex=boy#cate">同人</a>
+                  <a href="list.php?cid=13&sex=boy#cate">游戏</a>
+                  <a href="list.php?cid=14&sex=boy#cate">校园</a>
+                  <a href="list.php?cid=15&sex=boy#cate">经典</a>
+                	<!--<a href="list.php?cid=01&sex=boy#cate">都市</a>
+                  <a href="list.php?cid=02&sex=boy#cate">武俠</a>
+                  <a href="list.php?cid=03&sex=boy#cate">奇幻</a>
+                  <a href="list.php?cid=04&sex=boy#cate">仙俠</a>
+                  <a href="list.php?cid=05&sex=boy#cate">修真</a>
+                  <a href="list.php?cid=07&sex=boy#cate">異能</a>
+                  <a href="list.php?cid=08&sex=boy#cate">科幻</a>
+                  <a href="list.php?cid=09&sex=boy#cate">歷史</a>
+                  <a href="list.php?cid=11&sex=boy#cate">穿越</a>
+                  <a href="list.php?cid=12&sex=boy#cate">同人</a>
+                  <a href="list.php?cid=13&sex=boy#cate">遊戲</a>
+                  <a href="list.php?cid=14&sex=boy#cate">校園</a>
+                  <a href="list.php?cid=15&sex=boy#cate">經典</a>-->					
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="span6">
+          	<div class="widget">
+            	<div class="sidecontent girl">
+              	<h2>女生</h2>
+                <div class="cate-cloud">
+                	<a href="list.php?cid=01&sex=boy#cate">都市</a>
+                  <a href="list.php?cid=02&sex=boy#cate">武侠</a>
+                  <a href="list.php?cid=03&sex=boy#cate">奇幻</a>
+                  <a href="list.php?cid=04&sex=boy#cate">仙侠</a>
+                  <a href="list.php?cid=06&sex=boy#cate">耽美</a>
+                  <a href="list.php?cid=07&sex=boy#cate">异能</a>
+                  <a href="list.php?cid=08&sex=boy#cate">科幻</a>
+                  <a href="list.php?cid=10&sex=boy#cate">总裁</a>
+                  <a href="list.php?cid=11&sex=boy#cate">穿越</a>
+                  <a href="list.php?cid=12&sex=boy#cate">同人</a>
+                  <a href="list.php?cid=13&sex=boy#cate">游戏</a>
+                  <a href="list.php?cid=14&sex=boy#cate">校园</a>
+                  <a href="list.php?cid=16&sex=boy#cate">古代言情</a>
+                	<!--<a href="list.php?cid=01&sex=boy#cate">都市</a>
+                  <a href="list.php?cid=02&sex=boy#cate">武俠</a>
+                  <a href="list.php?cid=03&sex=boy#cate">奇幻</a>
+                  <a href="list.php?cid=04&sex=boy#cate">仙俠</a>
+                  <a href="list.php?cid=06&sex=boy#cate">耽美</a>
+                  <a href="list.php?cid=07&sex=boy#cate">異能</a>
+                  <a href="list.php?cid=08&sex=boy#cate">科幻</a>
+                  <a href="list.php?cid=10&sex=boy#cate">總裁</a>
+                  <a href="list.php?cid=11&sex=boy#cate">穿越</a>
+                  <a href="list.php?cid=12&sex=boy#cate">同人</a>
+                  <a href="list.php?cid=13&sex=boy#cate">遊戲</a>
+                  <a href="list.php?cid=14&sex=boy#cate">校園</a>
+                  <a href="list.php?cid=16&sex=boy#cate">古代言情</a>-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+    	<div class="container">
+      		<p class="copyright">Email: dasheng@sldbook.com</p>
+          <p class="copyright">侵权请联系</p>
+        	<p class="copyright">Copyright © 2016 水簾洞小說. All Rights Reserved.</p>
+        </div>
+    </div>
+    <p id="back-to-top"><a href="#top"></a></p>
+    <!--footerend-->
+    <!-- Le javascript  -->
+		<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+    <!--返回到顶部的JS 可以和其他JS合并,注意阅读页不需要返回顶部-->
+    <script type="text/javascript" src="js/backtotop.js"></script>
+  </body>
+</html>

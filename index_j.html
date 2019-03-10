@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<!--<html lang="zh-Hant">-->
+<head>
+    <meta charset="utf-8"/>
+    <title>水帘洞小说</title>
+    <!--<title>水簾洞小說</title>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+    <!-- Le styles -->
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+    <!--[if lte IE 7 ]>
+    <html class="lte_ie7">
+    <![endif]-->
+    <!--[if lte IE 8 ]>
+    <html class="lte_ie8">
+    <link rel="stylesheet" type="text/css" href="css/ie8.css"/>
+    <![endif]-->
+    <meta name="keywords" content="动漫,同人,玄幻" />
+    <meta name="description" content="同人文学。"/>
+</head>
+
+<body>
+
+<span id="top"></span>
+
+<div class="alert-danger IEalert">sldbook.com不支持IE7及以下IE浏览器，求关掉兼容模式，或者换个浏览器打开</div>
+<!--<div class="alert-danger" id="IEalert">sldbook.com不支持IE7及以下IE瀏覽器，求關掉兼容模式，或者換個瀏覽器打開</div>-->
+<!--页面加载层，数据加载时显示-->
+<div id="loading">
+    <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+    </div>
+    <i></i>
+
+    <p class="typing">加载中,&nbsp;&nbsp;&nbsp;请稍候……</p>
+    <!--<p class="typing">加載中,&nbsp;&nbsp;&nbsp;請稍候……</p>-->
+</div>
+<!--loadingEND-->
+
+<!--首页顶端渐变banner-->
+<div class="site-header clearfix" role="banner">
+    <div class="container"><!--内容限制的框-->
+        <div class="index-btns"><!--右上角的按钮栏，以后放注册登录-->
+            <!--简繁转换按钮，繁体版更改按钮的class，改成"fimg"-->
+            <button class="jimg btn-link index-jf" onclick="tofanti()" id="jf"></button>
+            <!--<button class="fimg btn-link index-jf" id="jfchange"></button>-->
+            <!--第三版需要添加的书架图标，不要删掉，回头删掉style直接用就行了-->
+            <button class="btn-link bookshelf" id="history"></button>
+        </div>
+        <div class="sitelogo">
+            <!--<img src="./img/title.png" alt="水簾洞小說">-->
+            <img src="./img/title.png" alt="水帘洞小说">
+        </div>
+        <form class="headersearch" id="search" onkeydown="if(event.keyCode==13)return false">
+            <i class="icon-search" onclick="searchs()">
+            </i>
+            <input type="text" id="query" class="index-search search-query" placeholder="请用简体中文搜索">
+            <!--<input type="text" class="index-search search-query" placeholder="請使用繁體中文搜索">-->
+        </form>
+    </div>
+    <!--containerEND-->
+</div>
+<!--siteheaderEND-->
+<div role="navigation" class="index-navbar">
+    <div class="container">
+        <ul class="inline catenav hidden-phone">
+            <li class="current">首页</li>
+            <li class="cateitem"><a onclick="tolist('category',encodeURI('都市'),1,'all')" href="javascript:void(0)"
+                                    title="都市">都市</a></li>
+            <li class="cateitem"><a onclick="tolist('category',encodeURI('武侠'),1,'all')" href="javascript:void(0)"
+                                    title="武侠">武侠</a></li>
+            <li class="cateitem"><a onclick="tolist('category',encodeURI('奇幻'),1,'all')" href="javascript:void(0)"
+                                    title="奇幻">奇幻</a></li>
+            <li class="cateitem"><a onclick="tolist('category',encodeURI('校园'),1,'all')" href="javascript:void(0)"
+                                    title="校园">校园</a></li>
+            <li class="cateitem"><a onclick="tolist('category',encodeURI('古代言情'),1,'all')" href="javascript:void(0)"
+                                    title="古代言情">古言</a></li>
+            <li class="catemore">
+                <a href="#footer-nav" title="所有分类">更多好书</a>
+            </li>
+            <!--<li class="current">首頁</li>
+            <li class="cateitem"><a href="list.php?cid=01&sex=all#cate" title="都市">都市</a></li>
+            <li class="cateitem"><a href="list.php?cid=02&sex=all#cate" title="武侠">武俠</a></li>
+            <li class="cateitem"><a href="list.php?cid=03&sex=all#cate" title="奇幻">奇幻</a></li>
+            <li class="cateitem"><a href="list.php?cid=14&sex=all#cate" title="校園">校園</a></li>
+            <li class="cateitem"><a href="list.php?cid=16&sex=girl#cate" title="古代言情">古言</a></li>
+            <li class="catemore">
+              <a href="#footer-nav" title="所有分類">更多好書</a>13811002050
+            </li>-->
+        </ul>
+        <ul class="inline catnav visible-phone">
+            <li class="current">首页</li>
+            <li class="phonenavitem"><a href="#footer-nav">分类</a></li>
+            <li class="phonenavitem"><a href="#tagcloud">标签</a></li>
+            <!--<li class="current">首頁</li>
+            <li class="phonenavitem"><a href="#footer-nav">分類</a></li>
+            <li class="phonenavitem"><a href="#tagcloud">標籤</a></li>-->
+        </ul>
+    </div>
+</div>
+<!--index-navbar END示-->
+
+<!--首页下方展示层-->
+<!--404错误层-->
+<div class="container" id="error404">
+    <div class="pic-error404">
+        <a class="btn btn-info" href="index.php" style="width: 100px;">刷新</a>
+    </div>
+</div>
+<!--展示内容层 ID=sldindex-->
+<div class="container clearfix main" id="sldindex">
+    <!-- 页面主体部分 ROW OF COLUMNS -->
+    <div class="row-fluid" role="main">
+        <!--构建左侧主要内站长推荐 id=zztj -->
+        <div class="span8" id="zztj">
+            <!--单本书信息卡 id：zztj-00 第一本书的卡片，以下ID為XX的是一個例子。
+            需要JS修改class的名称与
+            书籍的分类和性别对应例如都市就改成class=“bkcat boy01”-->
+            <!--NO.1 START-->
+            <div class="bkcard boy12" id="list-00">
+                <span class="cardbgp">
+                </span>
+                <span class="bkstatus" id="list-wj-00">
+                </span>
+
+                <div class="detail">
+                    <h1 id="list-sm-00">
+                        水帘洞小说
+                        <!--水簾洞小說-->
+                    </h1>
+
+                    <p class="bkmata">
+                        分类
+                        <!--分類-->
+                        &nbsp;&nbsp;
+                    <span id="list-fl-00">
+                      </span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作者&nbsp;&nbsp;
+                      <span id="list-zz-00">
+                      </span>
+                    </p>
+
+                    <p class="dsc" id="list-jj-00">
+                    </p>
+                    <hr>
+                    <div id="list-tag-00">
+                    </div>
+                </div>
+            </div>
+            <!--NO.1 END-->
+            <!--NO.2 START-->
+            <div class="bkcard" id="list-01">
+                <span class="cardbgp">
+                </span>
+                <span class="bkstatus" id="list-wj-01">
+                </span>
+
+                <div class="detail">
+                    <h1 id="list-sm-01">
+                        水帘洞小说
+                        <!--水簾洞小說-->
+                    </h1>
+
+                    <p class="bkmata">
+                        分类
+                        <!--分類-->
+                        &nbsp;&nbsp;
+                    <span id="list-fl-01">
+                    </span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作者&nbsp;&nbsp;
+                    <span id="list-zz-01">
+                    </span>
+                    </p>
+
+                    <p class="dsc" id="list-jj-01">
+                    </p>
+                    <hr>
+                    <div id="list-tag-01">
+                    </div>
+                </div>
+            </div>
+            <!--NO.2 END-->
+            <!--NO.3 START-->
+            <div class="bkcard" id="list-02">
+                <span class="cardbgp">
+                </span>
+                <span class="bkstatus" id="list-wj-02">
+                </span>
+
+                <div class="detail">
+                    <h1 id="list-sm-02">
+                        水帘洞小说
+                        <!--水簾洞小說-->
+                    </h1>
+
+                    <p class="bkmata">
+                        分类
+                        <!--分類-->
+                        &nbsp;&nbsp;
+                    <span id="list-fl-02">
+                    </span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作者&nbsp;&nbsp;
+                    <span id="list-zz-02">
+                    </span>
+                    </p>
+
+                    <p class="dsc" id="list-jj-02">
+                    </p>
+                    <hr>
+                    <div id="list-tag-02">
+                    </div>
+                </div>
+            </div>
+            <!--NO.3 END-->
+            <!--NO.4 START-->
+            <div class="bkcard" id="list-03">
+                <span class="cardbgp">
+                </span>
+                <span class="bkstatus" id="list-wj-03">
+                </span>
+
+                <div class="detail">
+                    <h1 id="list-sm-03">
+                        水帘洞小说
+                        <!--水簾洞小說-->
+                    </h1>
+
+                    <p class="bkmata">
+                        分类
+                        <!--分類-->
+                        &nbsp;&nbsp;
+                    <span id="list-fl-03">
+                    </span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作者&nbsp;&nbsp;
+                    <span id="list-zz-03">
+                    </span>
+                    </p>
+
+                    <p class="dsc" id="list-jj-03">
+                    </p>
+                    <hr>
+                    <div id="list-tag-03">
+                    </div>
+                </div>
+            </div>
+            <!--NO.4 END-->
+            <!--NO.5 START-->
+            <div class="bkcard" id="list-04">
+                <span class="cardbgp">
+                </span>
+                <span class="bkstatus" id="list-wj-04">
+                </span>
+
+                <div class="detail">
+                    <h1 id="list-sm-04">
+                        水帘洞小说
+                        <!--水簾洞小說-->
+                    </h1>
+
+                    <p class="bkmata">
+                        分类
+                        <!--分類-->
+                        &nbsp;&nbsp;
+                    <span id="list-fl-04">
+                    </span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作者&nbsp;&nbsp;
+                    <span id="list-zz-04">
+                    </span>
+                    </p>
+
+                    <p class="dsc" id="list-jj-04">
+                    </p>
+                    <hr>
+                    <div id="list-tag-04">
+                    </div>
+                </div>
+            </div>
+            <!--NO.5 END-->
+            <!--NO.6 START-->
+            <div class="bkcard" id="list-05">
+                <span class="cardbgp">
+                </span>
+                <span class="bkstatus" id="list-wj-05">
+                </span>
+
+                <div class="detail">
+                    <h1 id="list-sm-05">
+                        水帘洞小说
+                        <!--水簾洞小說-->
+                    </h1>
+
+                    <p class="bkmata">
+                        分类
+                        <!--分類-->
+                        &nbsp;&nbsp;
+                    <span id="list-fl-05">
+                    </span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作者&nbsp;&nbsp;
+                    <span id="list-zz-05">
+                    </span>
+                    </p>
+
+                    <p class="dsc" id="list-jj-05">
+                    </p>
+                    <hr>
+                    <div id="list-tag-05">
+                    </div>
+                </div>
+            </div>
+            <!--NO.6 END-->
+            <!--NO.7 START-->
+            <div class="bkcard" id="list-06">
+                <span class="cardbgp">
+                </span>
+                <span class="bkstatus" id="list-wj-06">
+                </span>
+
+                <div class="detail">
+                    <h1 id="list-sm-06">
+                        水帘洞小说
+                        <!--水簾洞小說-->
+                    </h1>
+
+                    <p class="bkmata">
+                        分类
+                        <!--分類-->
+                        &nbsp;&nbsp;
+                    <span id="list-fl-06">
+                    </span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作者&nbsp;&nbsp;
+                    <span id="list-zz-06">
+                    </span>
+                    </p>
+
+                    <p class="dsc" id="list-jj-06">
+                    </p>
+                    <hr>
+                    <div id="list-tag-06">
+                    </div>
+                </div>
+            </div>
+            <!--NO.7 END-->
+            <!--NO.8 START-->
+            <div class="bkcard" id="list-07">
+                <span class="cardbgp">
+                </span>
+                <span class="bkstatus" id="list-wj-07">
+                </span>
+
+                <div class="detail">
+                    <h1 id="list-sm-07">
+                        水帘洞小说
+                        <!--水簾洞小說-->
+                    </h1>
+
+                    <p class="bkmata">
+                        分类
+                        <!--分類-->
+                        &nbsp;&nbsp;
+                    <span id="list-fl-07">
+                    </span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作者&nbsp;&nbsp;
+                    <span id="list-zz-07">
+                    </span>
+                    </p>
+
+                    <p class="dsc" id="list-jj-07">
+                    </p>
+                    <hr>
+                    <div id="list-tag-07">
+                    </div>
+                </div>
+            </div>
+            <!--NO.8 END-->
+            <!--NO.9 START-->
+            <div class="bkcard" id="list-08">
+                <span class="cardbgp">
+                </span>
+                <span class="bkstatus" id="list-wj-08">
+                </span>
+
+                <div class="detail">
+                    <h1 id="list-sm-08">
+                        水帘洞小说
+                        <!--水簾洞小說-->
+                    </h1>
+
+                    <p class="bkmata">
+                        分类
+                        <!--分類-->
+                        &nbsp;&nbsp;
+                    <span id="list-fl-08">
+                    </span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作者&nbsp;&nbsp;
+                    <span id="list-zz-08">
+                    </span>
+                    </p>
+
+                    <p class="dsc" id="list-jj-08">
+                    </p>
+                    <hr>
+                    <div id="list-tag-08">
+                    </div>
+                </div>
+            </div>
+            <!--NO.9 END-->
+            <!--NO.10 START-->
+            <div class="bkcard" id="list-09">
+                <span class="cardbgp">
+                </span>
+                <span class="bkstatus" id="list-wj-09">
+                </span>
+
+                <div class="detail">
+                    <h1 id="list-sm-09">
+                        水帘洞小说
+                        <!--水簾洞小說-->
+                    </h1>
+
+                    <p class="bkmata">
+                        分类
+                        <!--分類-->
+                        &nbsp;&nbsp;
+                    <span id="list-fl-09">
+                    </span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作者&nbsp;&nbsp;
+                    <span id="list-zz-09">
+                    </span>
+                    </p>
+
+                    <p class="dsc" id="list-jj-09">
+                    </p>
+                    <hr>
+                    <div id="list-tag-09">
+                    </div>
+                </div>
+            </div>
+            <!--NO.10 END-->
+        </div>
+        <!--span9 end-->
+        <!--构建左侧主要内站长推荐完-->
+        <div class="span4">
+            <!--标签云开始-->
+            <div class="widget" ID="tagcloud">
+                <div class="sidecontent">
+                    <h2>
+                        标签云
+                        <!--標籤云-->
+                    </h2>
+
+                    <div class="tag-cloud" id="tagtj">
+                        <!--简体标签两个类，jimg和tag+id，以下为一个例子-->
+                        <a class="tag301 jimg" title="tag" href="tag.php?id=301"></a>
+                        <!--<a class="tag301 fimg" title="tag" href="tag.php?id=301"></a>-->
+                        <a class="moretag" title="tag" href="#moretag">...</a>
+                    </div>
+                </div>
+            </div>
+            <!--#tagcloud END-->
+            <!--火爆推荐开始-->
+            <div class="widget" ID="hbtj">
+                <div class="sidecontent">
+                    <h2>
+                        火爆推荐
+                        <!--火爆推薦-->
+                    </h2>
+                    <ul>
+                        <li id="hbtj00">
+                            <a href="#">書名</a>
+                        </li>
+                        <li id="hbtj01"></li>
+                        <li id="hbtj02"></li>
+                        <li id="hbtj03"></li>
+                        <li id="hbtj04"></li>
+                        <li id="hbtj05"></li>
+                        <li id="hbtj06"></li>
+                        <li id="hbtj07"></li>
+                        <li id="hbtj08"></li>
+                        <li id="hbtj09"></li>
+                    </ul>
+                </div>
+            </div>
+            <!--#hbtjEND-->
+            <!--总推荐榜开始-->
+            <div class="widget" ID="ztjb">
+                <div class="sidecontent">
+                    <h2>
+                        总推荐榜
+                        <!--總推薦榜-->
+                    </h2>
+                    <ul>
+                        <li id="ztjb00"></li>
+                        <li id="ztjb01"></li>
+                        <li id="ztjb02"></li>
+                        <li id="ztjb03"></li>
+                        <li id="ztjb04"></li>
+                        <li id="ztjb05"></li>
+                        <li id="ztjb06"></li>
+                        <li id="ztjb07"></li>
+                        <li id="ztjb08"></li>
+                        <li id="ztjb09"></li>
+                    </ul>
+                </div>
+            </div>
+            <!--#ztjbEND-->
+        </div>
+        <!--span4 END-->
+    </div>
+    <!--rowfluid END-->
+</div>
+<!-- /main end-->
+<!--footer start-->
+<div id="footer-nav">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span6">
+                <div class="widget">
+                    <div class="sidecontent boy">
+                        <h2>男生</h2>
+
+                        <div class="cate-cloud">
+                            <a onclick="tolist('category',encodeURI('都市'),1,0)" href="javascript:void(0)">都市</a>
+                            <a onclick="tolist('category',encodeURI('武侠'),1,0)" href="javascript:void(0)">武侠</a>
+                            <a onclick="tolist('category',encodeURI('奇幻'),1,0)" href="javascript:void(0)">奇幻</a>
+                            <a onclick="tolist('category',encodeURI('仙侠'),1,0)" href="javascript:void(0)">仙侠</a>
+                            <a onclick="tolist('category',encodeURI('修真'),1,0)" href="javascript:void(0)">修真</a>
+                            <a onclick="tolist('category',encodeURI('异能'),1,0)" href="javascript:void(0)">异能</a>
+                            <a onclick="tolist('category',encodeURI('科幻'),1,0)" href="javascript:void(0)">科幻</a>
+                            <a onclick="tolist('category',encodeURI('历史'),1,0)" href="javascript:void(0)">历史</a>
+                            <a onclick="tolist('category',encodeURI('穿越'),1,0)" href="javascript:void(0)">穿越</a>
+                            <a onclick="tolist('category',encodeURI('同人'),1,0)" href="javascript:void(0)">同人</a>
+                            <a onclick="tolist('category',encodeURI('游戏'),1,0)" href="javascript:void(0)">游戏</a>
+                            <a onclick="tolist('category',encodeURI('校园'),1,0)" href="javascript:void(0)">校园</a>
+                            <a onclick="tolist('category',encodeURI('经典'),1,0)" href="javascript:void(0)">经典</a>
+                            <!--<a href="list.php?cid=01&sex=boy#cate">都市</a>
+                          <a href="list.php?cid=02&sex=boy#cate">武俠</a>
+                          <a href="list.php?cid=03&sex=boy#cate">奇幻</a>
+                          <a href="list.php?cid=04&sex=boy#cate">仙俠</a>
+                          <a href="list.php?cid=05&sex=boy#cate">修真</a>
+                          <a href="list.php?cid=07&sex=boy#cate">異能</a>
+                          <a href="list.php?cid=08&sex=boy#cate">科幻</a>
+                          <a href="list.php?cid=09&sex=boy#cate">歷史</a>
+                          <a href="list.php?cid=11&sex=boy#cate">穿越</a>
+                          <a href="list.php?cid=12&sex=boy#cate">同人</a>
+                          <a href="list.php?cid=13&sex=boy#cate">遊戲</a>
+                          <a href="list.php?cid=14&sex=boy#cate">校園</a>
+                          <a href="list.php?cid=15&sex=boy#cate">經典</a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="span6">
+                <div class="widget">
+                    <div class="sidecontent girl">
+                        <h2>女生</h2>
+
+                        <div class="cate-cloud">
+                            <a onclick="tolist('category',encodeURI('都市'),1,1)" href="javascript:void(0)">都市</a>
+                            <a onclick="tolist('category',encodeURI('武侠'),1,1)" href="javascript:void(0)">武侠</a>
+                            <a onclick="tolist('category',encodeURI('奇幻'),1,1)" href="javascript:void(0)">奇幻</a>
+                            <a onclick="tolist('category',encodeURI('仙侠'),1,1)" href="javascript:void(0)">仙侠</a>
+                            <a onclick="tolist('category',encodeURI('耽美'),1,1)" href="javascript:void(0)">耽美</a>
+                            <a onclick="tolist('category',encodeURI('异能'),1,1)" href="javascript:void(0)">异能</a>
+                            <a onclick="tolist('category',encodeURI('科幻'),1,1)" href="javascript:void(0)">科幻</a>
+                            <a onclick="tolist('category',encodeURI('总裁'),1,1)" href="javascript:void(0)">总裁</a>
+                            <a onclick="tolist('category',encodeURI('穿越'),1,1)" href="javascript:void(0)">穿越</a>
+                            <a onclick="tolist('category',encodeURI('同人'),1,1)" href="javascript:void(0)">同人</a>
+                            <a onclick="tolist('category',encodeURI('游戏'),1,1)" href="javascript:void(0)">游戏</a>
+                            <a onclick="tolist('category',encodeURI('校园'),1,1)" href="javascript:void(0)">校园</a>
+                            <a onclick="tolist('category',encodeURI('古代言情'),1,1)" href="javascript:void(0)">古代言情</a>
+                            <!--<a href="list.php?cid=01&sex=boy#cate">都市</a>
+                          <a href="list.php?cid=02&sex=boy#cate">武俠</a>
+                          <a href="list.php?cid=03&sex=boy#cate">奇幻</a>
+                          <a href="list.php?cid=04&sex=boy#cate">仙俠</a>
+                          <a href="list.php?cid=06&sex=boy#cate">耽美</a>
+                          <a href="list.php?cid=07&sex=boy#cate">異能</a>
+                          <a href="list.php?cid=08&sex=boy#cate">科幻</a>
+                          <a href="list.php?cid=10&sex=boy#cate">總裁</a>
+                          <a href="list.php?cid=11&sex=boy#cate">穿越</a>
+                          <a href="list.php?cid=12&sex=boy#cate">同人</a>
+                          <a href="list.php?cid=13&sex=boy#cate">遊戲</a>
+                          <a href="list.php?cid=14&sex=boy#cate">校園</a>
+                          <a href="list.php?cid=16&sex=boy#cate">古代言情</a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div class="container">
+        <p class="copyright">Email: dasheng@sldbook.com</p>
+
+        <p class="copyright">侵权请联系</p>
+        <p class="copyright">Copyright © 2016 水簾洞小說. All Rights Reserved.</p>
+    </div>
+</div>
+<p id="back-to-top"><a href="#top"></a></p>
+<!--footerend-->
+<!-- Le javascript  -->
+<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+<!--返回到顶部的JS 可以和其他JS合并,注意阅读页不需要返回顶部-->
+<script type="text/javascript" src="js/backtotop.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+<script type="text/javascript" src="js/list.js"></script>
+<script type="text/javascript">
+    var cookie_jof =  getCookie('jof');
+    if(cookie_jof == null||cookie_jof == 'undefind'){
+        setCookie('jof',0);
+        cookie_jof = 0;
+    }
+    if(cookie_jof != 0){
+        location.href = 'index.html';
+    }
+    function tofanti(){
+        setCookie('jof',1);
+        location.href = 'index.html';
+    }
+</script>
+<script type="text/javascript">
+    //推荐文件路径
+    var tjpath = 'config-tj/j/zztj.txt';
+    var jof = '0';
+    var funs = new Functions();
+    funs.gets(tjpath, setData, jof);
+    function tolist(type, query, page, sex) {
+        var url = "list.php?type=" + type + "&query=" + query + "&sex=" + sex + "#" + page;
+        location.href = url;
+    }
+</script>
+<script type="text/javascript" src="js/Tat.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#search').keydown(function (event) {
+            var curKey = event.which;
+            if (curKey == 13) {
+                var query = $('#query').val();
+                if (query.length == 0) {
+                    alert("请输入搜索内容");
+                } else {
+                    window.location.href = 'list.php?type=query&query=' + query + '&sex=0#1';
+                }
+            }
+        });
+    });
+    function searchs(){
+        var query = $('#query').val();
+        if (query.length == 0) {
+            alert("请输入搜索内容");
+        } else {
+            location.href = 'list.php?type=query&query=' + query + '&sex=0#1';
+        }
+    }
+</script>
+</body>
+</html>
